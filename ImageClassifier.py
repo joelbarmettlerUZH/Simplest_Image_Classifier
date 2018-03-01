@@ -51,7 +51,7 @@ class ImageClassifier:
     #use this method if you do not want to normalize an image or database and use raw fotage
     @staticmethod
     def normalizeNot(image):
-        pass
+        return image
 
     #applies normFunction to every image in Database
     def normalizeDatabase(self, normFunction):
