@@ -1,6 +1,6 @@
 # Simplest Image Classifier - Tutorial
 
-This little image classifier is a showcase of how easy it is to create a functional image classifier using just basic python and some easy to use and well-documented librariees. This lecture was presented in the Informatics I - Python Programmig tutorial session in November.
+This little image classifier is a showcase of how easy it is to create a functional image classifier using just basic python and some easy to use and well-documented librariees. I prepared this script for my Informatics I - Python Programmig tutorial session in November to show my students what some basic python programming can achieve! 
 
 
 # Our Goal 
