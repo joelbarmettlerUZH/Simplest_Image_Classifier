@@ -167,12 +167,15 @@ The code is simple: Open the database and load the database content out of the p
 We have talked about normalization a little bit, but not in detail. Why should we need to normalize an image, and what does that even mean? Well, the only thing that we defined about the input image is that is has to have a fixed size of 64 by 64 pixels. But that still leaves open quiet some room for variation: what about the colour of the digit and the background? Can we compare a blue nine on a green background? What about a scanned image, where the image has low contrast and a gray background? This seems hard to handle, but in fact it is easy to reduce these variables. 
 
 Let's have a look how an imput image may look like. 
+
 ![Noisy](https://github.com/joelbarmettlerUZH/Simplest_Image_Classifier/raw/master/readme_resources/test8_noisy.jpg)
 
 While it looks similar to the digit 8 from our test images (in fact, it is the same image with some visual styling), it is clear that we can not directly compare this image to our database and hope to get a propper result. It would be much nicer if every image had a similar form.
+
 ![Noisy Goal](https://github.com/joelbarmettlerUZH/Simplest_Image_Classifier/raw/master/readme_resources/test8_noisy_goal.jpg)
 
 Let's look at a selection of this image and see how we could achieve this reduction. We take a close shot of the region marked in red (have a close look, it is just one pixel collumn and barely visible)
+
 ![Selection](https://github.com/joelbarmettlerUZH/Simplest_Image_Classifier/raw/master/readme_resources/test8_noisy_selcetion.jpg)
 
 This is the same region, but now zoomed in. We can see some of the pixel values, the leftmost yellowish pixel has the RGB value [244, 240, 125], the rightmost pixel has the RGB value [63, 74, 157]. Remember that the yellowish part does not belong to the digit, while the blue part to the right does. 
